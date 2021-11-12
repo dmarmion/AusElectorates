@@ -1,11 +1,13 @@
 import React from "react";
 
-function Electorate(props) {
-  return (
-    <div className="electorate">
-      <p>{`(${props.row}, ${props.col})`}</p>
-    </div>
-  );
+class Electorate extends React.Component {
+  render() {
+    return (
+      <div className="electorate">
+        <p>{this.props.name === "none" ? "." : this.props.name}</p>
+      </div>
+    );
+  } 
 }
 
 export default Electorate;

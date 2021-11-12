@@ -5,8 +5,9 @@ import Electorate from "./Electorate";
 class Map extends React.Component {
   // Render the grid of electorates
   renderElectorates() {
-    const tableRows = 16;
-    const tableCols = 20;
+    const tableRows = 19;
+    const tableCols = 16;
+    const electrateNames = require("../data/locations2022.json");
 
     // Helper function to generate the rows of the table
     function renderGridRows() {
@@ -22,14 +23,13 @@ class Map extends React.Component {
     }
 
     // Helper function to generate the columns in each row
-    function renderGridColumns(rowNo) {
+    function renderGridColumns(row) {
       let cols = [];
       for (let col = 0; col < tableCols; col++) {
         cols.push(
           <td>
             <Electorate
-              row={rowNo}
-              col={col}
+              name={electrateNames[`${col},${row}`]}
             />
           </td>
         )
