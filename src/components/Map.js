@@ -7,7 +7,7 @@ class Map extends React.Component {
   renderElectorates() {
     const tableRows = 19;
     const tableCols = 16;
-    const electrateNames = require("../data/locations2022.json");
+    const electorateNames = require("../data/locations2022.json");
 
     // Helper function to generate the rows of the table
     function renderGridRows() {
@@ -29,7 +29,7 @@ class Map extends React.Component {
         cols.push(
           <td>
             <Electorate
-              name={electrateNames[`${col},${row}`]}
+              name={electorateNames[`${col},${row}`]}
             />
           </td>
         )
