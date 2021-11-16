@@ -3,11 +3,51 @@
 }
 
 .electorate {
-  background-color: grey;
+  background-color: lightgrey;
   height: 30px;
   width: 30px;
 }
 
 .electorate-none {
   background-color: white;
+}
+
+/*
+ * The party colours are those used by Wikipedia, see
+ * https://en.wikipedia.org/wiki/Category:Australia_political_party_color_templates
+ */
+.electorate-labor {
+  background-color: #de3533;
+}
+
+.electorate-liberal {
+  background-color: #0047ab;
+}
+
+.electorate-nationals {
+  background-color: #006644;
+}
+
+.electorate-lnp {
+  background-color: #1456f1;
+}
+
+.electorate-ind {
+  background-color: grey;
+}
+
+.electorate-greens {
+  background-color: #00a651;
+}
+
+.electorate-uap {
+  background-color: #ffed00;
+}
+
+.electorate-kap {
+  background-color: #b50204;
+}
+
+.electorate-ca {
+  background-color: #ff6300;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import getPartyClassMap from "../utils";
 
 class Electorate extends React.Component {
   /*
@@ -13,9 +14,17 @@ class Electorate extends React.Component {
     // The square should be blank if it does not contain an electorate
     if (this.props.name === "none") {
       classes += "electorate-none" + delimiter;
+    } else {
+      let partyClass = getPartyClassMap().get(this.props.party);
+
+      if (partyClass === undefined) {
+        partyClass = "";
+      }
+
+      classes += partyClass + delimiter;
     }
 
-    return classes;
+    return classes.trimEnd();
   }
 
   render() {
