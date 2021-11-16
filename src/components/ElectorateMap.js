@@ -16,7 +16,7 @@ class ElectorateMap extends React.Component {
       let rows = [];
       for (let row = 0; row < tableRows; row++) {
         rows.push(
-          <tr>
+          <tr key={row}>
             {renderGridColumns(row)}
           </tr>
         )
@@ -32,7 +32,7 @@ class ElectorateMap extends React.Component {
         let party = (seatName === "none" ? "" : parties[seatName]);
 
         cols.push(
-          <td>
+          <td key={`${row}-${col}`}>
             <Electorate
               name={seatName}
               party={party}
@@ -45,7 +45,9 @@ class ElectorateMap extends React.Component {
 
     let tableElements = (
       <table>
-        {renderGridRows()}
+        <tbody>
+          {renderGridRows()}
+        </tbody>
       </table>
     )
 
