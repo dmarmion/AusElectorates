@@ -2,7 +2,7 @@ import React from "react";
 
 import Electorate from "./Electorate";
 
-class Map extends React.Component {
+class ElectorateMap extends React.Component {
   // Render the grid of electorates
   renderElectorates() {
     const tableRows = 19;
@@ -61,4 +61,4 @@ class Map extends React.Component {
   }
 }
 
-export default Map;
+export default ElectorateMap;

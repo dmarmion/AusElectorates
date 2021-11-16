@@ -2,14 +2,14 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Header from "./components/Header";
-import Map from "./components/Map"
+import ElectorateMap from "./components/ElectorateMap"
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <Header/>
-        <Map/>
+        <ElectorateMap/>
       </div>
     </div>
   );
