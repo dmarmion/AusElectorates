@@ -44,7 +44,7 @@ class ElectorateMap extends React.Component {
     }
 
     let tableElements = (
-      <table>
+      <table className="electorate-map">
         <tbody>
           {renderGridRows()}
         </tbody>
@@ -56,7 +56,7 @@ class ElectorateMap extends React.Component {
 
   render() {
     return (
-      <div className="map">
+      <div>
         {this.renderElectorates()}
       </div>
     );

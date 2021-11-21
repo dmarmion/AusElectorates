@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.header {
+  margin-top: 20px;
+}
+
+.electorate-map {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .electorate {
   background-color: lightgrey;
   height: 30px;
