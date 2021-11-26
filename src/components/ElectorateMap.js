@@ -3,6 +3,15 @@ import React from "react";
 import Electorate from "./Electorate";
 
 class ElectorateMap extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentElectorate: "none"
+    };
+
+    this.handleElectorateChange = this.handleElectorateChange.bind(this);
+  }
+
   // Render the grid of electorates
   renderElectorates() {
     const tableRows = 19;
@@ -12,7 +21,7 @@ class ElectorateMap extends React.Component {
     const parties = require("../data/parties2021.json")
 
     // Helper function to generate the rows of the table
-    function renderGridRows() {
+    const renderGridRows = () => {
       let rows = [];
       for (let row = 0; row < tableRows; row++) {
         rows.push(
@@ -22,10 +31,10 @@ class ElectorateMap extends React.Component {
         )
       }
       return rows;
-    }
+    };
 
     // Helper function to generate the columns in each row
-    function renderGridColumns(row) {
+    const renderGridColumns = (row) => {
       let cols = [];
       for (let col = 0; col < tableCols; col++) {
         let seatName = electorateNames[`${col},${row}`];
@@ -36,12 +45,13 @@ class ElectorateMap extends React.Component {
             <Electorate
               name={seatName}
               party={party}
+              onSelectionChange={this.handleElectorateChange}
             />
           </td>
         )
       }
       return cols;
-    }
+    };
 
     let tableElements = (
       <table className="electorate-map">
@@ -54,10 +64,22 @@ class ElectorateMap extends React.Component {
     return tableElements;
   }
 
+  // Update the currently selected electorate
+  handleElectorateChange(electorate) {
+    this.setState({currentElectorate: electorate});
+  }
+
   render() {
     return (
       <div>
         {this.renderElectorates()}
+        <h4>
+          Currently selected: {
+            this.state.currentElectorate === "none"
+              ? ""
+              : this.state.currentElectorate
+          }
+        </h4>
       </div>
     );
   }
