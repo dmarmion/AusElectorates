@@ -1,14 +1,12 @@
-.App {
-  text-align: center;
-}
-
 .header {
   margin-top: 20px;
+  text-align: center;
 }
 
 .electorate-map {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .electorate {
