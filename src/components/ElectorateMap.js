@@ -6,7 +6,8 @@ class ElectorateMap extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentElectorate: "none"
+      currentElectorate: "none",
+      parties: require("../data/parties2021.json")
     };
 
     this.handleElectorateChange = this.handleElectorateChange.bind(this);
@@ -18,7 +19,6 @@ class ElectorateMap extends React.Component {
     const tableCols = 16;
     
     const electorateNames = require("../data/locations2022.json");
-    const parties = require("../data/parties2021.json")
 
     // Helper function to generate the rows of the table
     const renderGridRows = () => {
@@ -38,7 +38,7 @@ class ElectorateMap extends React.Component {
       let cols = [];
       for (let col = 0; col < tableCols; col++) {
         let seatName = electorateNames[`${col},${row}`];
-        let party = (seatName === "none" ? "" : parties[seatName]);
+        let party = (seatName === "none" ? "" : this.state.parties[seatName]);
 
         cols.push(
           <td key={`${row}-${col}`}>
@@ -77,7 +77,8 @@ class ElectorateMap extends React.Component {
           Currently selected: {
             this.state.currentElectorate === "none"
               ? ""
-              : this.state.currentElectorate
+              : `${this.state.currentElectorate} ` + 
+                `(${this.state.parties[this.state.currentElectorate]})`
           }
         </h4>
       </div>
