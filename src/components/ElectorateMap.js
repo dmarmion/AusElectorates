@@ -7,7 +7,7 @@ class ElectorateMap extends React.Component {
     super(props);
     this.state = {
       currentElectorate: "none",
-      parties: require("../data/parties2021.json")
+      parties: require("../data/partiespre2022.json")
     };
 
     this.handleElectorateChange = this.handleElectorateChange.bind(this);
