@@ -18,7 +18,7 @@ class ElectorateMap extends React.Component {
     const tableRows = 19;
     const tableCols = 16;
     
-    const electorateNames = require("../data/locations2022.json");
+    const electorateNames = require("../data/locations2019.json");
 
     // Helper function to generate the rows of the table
     const renderGridRows = () => {
