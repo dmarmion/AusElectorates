@@ -1,5 +1,5 @@
 import React from "react";
-import getPartyClassMap from "../utils";
+import { getPartyClassMap } from "../utils";
 
 class Electorate extends React.Component {
   constructor(props) {

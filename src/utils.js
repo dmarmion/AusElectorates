@@ -1,5 +1,5 @@
 /* Get a Map mapping party names to their electorate CSS class */
-function getPartyClassMap() {
+export function getPartyClassMap() {
   const partyClasses = new Map();
 
   partyClasses.set("Labor", "electorate-labor");
@@ -15,4 +15,25 @@ function getPartyClassMap() {
   return partyClasses;
 }
 
-export default getPartyClassMap;
+/*
+ * Get a Map mapping each dataset to the name of each data file needed to
+ * render that dataset
+ */
+export function getDatasetFiles() {
+  const datasetLocations = new Map();
+
+  datasetLocations.set("2019 Election Results", {
+    locations: "locations2019.json",
+    parties: "parties2019.json"
+  });
+  datasetLocations.set("Before 2022 Election", {
+    locations: "locations2019.json",
+    parties: "partiespre2022.json"
+  });
+  datasetLocations.set("2022 Election Results", {
+    locations: "locations2022.json",
+    parties: "parties2022.json"
+  });
+
+  return datasetLocations;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 
+import DataSelector from "./DataSelector";
 import Electorate from "./Electorate";
 
 class ElectorateMap extends React.Component {
@@ -12,6 +13,7 @@ class ElectorateMap extends React.Component {
       currentElectorate: "none"
     };
 
+    this.handleCartogramDataChange = this.handleCartogramDataChange.bind(this);
     this.handleElectorateChange = this.handleElectorateChange.bind(this);
   }
 
@@ -64,6 +66,11 @@ class ElectorateMap extends React.Component {
     return tableElements;
   }
 
+  // Update the data used to construct the cartogram
+  handleCartogramDataChange(locations, parties) {
+    this.setState({locations: locations, parties: parties});
+  }
+
   // Update the currently selected electorate
   handleElectorateChange(electorate) {
     this.setState({currentElectorate: electorate});
@@ -81,6 +88,7 @@ class ElectorateMap extends React.Component {
                 `(${this.state.parties[this.state.currentElectorate]})`
           }
         </h4>
+        <DataSelector onDataChange={this.handleCartogramDataChange}/>
       </div>
     );
   }
