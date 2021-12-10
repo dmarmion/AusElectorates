@@ -78,17 +78,21 @@ class ElectorateMap extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.renderElectorates()}
-        <h4>
-          Currently selected: {
-            this.state.currentElectorate === "none"
-              ? ""
-              : `${this.state.currentElectorate} ` + 
-                `(${this.state.parties[this.state.currentElectorate]})`
-          }
-        </h4>
-        <DataSelector onDataChange={this.handleCartogramDataChange}/>
+      <div className="row">
+        <div className="col-md-9">
+          {this.renderElectorates()}
+          <h4>
+            Currently selected: {
+              this.state.currentElectorate === "none"
+                ? ""
+                : `${this.state.currentElectorate} ` +
+                  `(${this.state.parties[this.state.currentElectorate]})`
+            }
+          </h4>
+        </div>
+        <div className="col-md-3">
+          <DataSelector onDataChange={this.handleCartogramDataChange}/>
+        </div>
       </div>
     );
   }

@@ -58,3 +58,7 @@
 .electorate-ca {
   background-color: #ff6300;
 }
+
+.data-selector label {
+  width: 100%;
+}

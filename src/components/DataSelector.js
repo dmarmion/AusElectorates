@@ -23,12 +23,13 @@ class DataSelector extends React.Component {
   render() {
     const dataFiles = getDatasetFiles();
     return (
-      <div>
+      <div className="data-selector">
         {
           Array.from(dataFiles.keys()).map((datasetName) => {
             return (
-              <div key={datasetName}>
+              <div className="form-check" key={datasetName}>
                 <input
+                  className="btn-check"
                   type="radio"
                   name="dataset"
                   id={datasetName}
@@ -38,7 +39,9 @@ class DataSelector extends React.Component {
                     dataFiles.get(datasetName).parties
                   )}
                 />
-                <label htmlFor={datasetName}>{datasetName}</label>
+                <label className="btn btn-secondary" htmlFor={datasetName}>
+                  {datasetName}
+                </label>
               </div>
             )
           })
