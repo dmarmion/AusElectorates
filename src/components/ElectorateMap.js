@@ -19,8 +19,8 @@ class ElectorateMap extends React.Component {
 
   // Render the grid of electorates
   renderElectorates() {
-    const tableRows = 19;
-    const tableCols = 16;
+    const tableRows = this.state.locations.rows;
+    const tableCols = this.state.locations.columns;
     
     // Helper function to generate the rows of the table
     const renderGridRows = () => {
