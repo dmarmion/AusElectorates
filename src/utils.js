@@ -22,18 +22,22 @@ export function getPartyClassMap() {
 export function getDatasetFiles() {
   const datasetLocations = new Map();
 
-  datasetLocations.set("2019 Election Results", {
+  datasetLocations.set("2019 Federal Election Results", {
     locations: "locations2019.json",
     parties: "parties2019.json"
   });
-  datasetLocations.set("Before 2022 Election", {
+  datasetLocations.set("Before 2022 Federal Election", {
     locations: "locations2019.json",
     parties: "partiespre2022.json"
   });
-  datasetLocations.set("2022 Election Results", {
+  datasetLocations.set("2022 Federal Election Results", {
     locations: "locations2022.json",
     parties: "parties2022.json"
   });
+  datasetLocations.set("2018 Victorian Election Results", {
+    locations: "locationsvic2014.json",
+    parties: "partiesvic2018.json"
+  })
 
   return datasetLocations;
 }
