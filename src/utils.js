@@ -38,6 +38,10 @@ export function getDatasetFiles() {
     locations: "locationsvic2014.json",
     parties: "partiesvic2018.json"
   })
+  datasetLocations.set("2022 Victorian Election Results", {
+    locations: "locationsvic2022.json",
+    parties: "partiesvic2022.json"
+  })
 
   return datasetLocations;
 }
