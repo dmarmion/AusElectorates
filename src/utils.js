@@ -34,6 +34,14 @@ export function getDatasetFiles() {
     locations: "locations2022.json",
     parties: "parties2022.json"
   });
+  datasetLocations.set("2014 Victorian Election Results", {
+    locations: "locationsvic2014.json",
+    parties: "partiesvic2014.json"
+  })
+  datasetLocations.set("Before 2018 Victorian Election", {
+    locations: "locationsvic2014.json",
+    parties: "partiesvicpre2018.json"
+  })
   datasetLocations.set("2018 Victorian Election Results", {
     locations: "locationsvic2014.json",
     parties: "partiesvic2018.json"
