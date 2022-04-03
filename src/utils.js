@@ -27,6 +27,10 @@ export function getDatasetFiles() {
     locations: "locations2016.json",
     parties: "parties2016.json"
   });
+  datasetLocations.set("Before 2019 Federal Election", {
+    locations: "locations2016.json",
+    parties: "partiespre2019.json"
+  })
   datasetLocations.set("2019 Federal Election Results", {
     locations: "locations2019.json",
     parties: "parties2019.json"
