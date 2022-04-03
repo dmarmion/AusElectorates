@@ -11,6 +11,7 @@ export function getPartyClassMap() {
   partyClasses.set("United Australia", "electorate-uap");
   partyClasses.set("Katter's Australian", "electorate-kap");
   partyClasses.set("Centre Alliance", "electorate-ca");
+  partyClasses.set("Nick Xenophon Team", "electorate-nxt")
 
   return partyClasses;
 }
@@ -22,6 +23,10 @@ export function getPartyClassMap() {
 export function getDatasetFiles() {
   const datasetLocations = new Map();
 
+  datasetLocations.set("2016 Federal Election Results", {
+    locations: "locations2016.json",
+    parties: "parties2016.json"
+  });
   datasetLocations.set("2019 Federal Election Results", {
     locations: "locations2019.json",
     parties: "parties2019.json"
