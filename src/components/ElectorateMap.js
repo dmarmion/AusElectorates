@@ -91,7 +91,7 @@ class ElectorateMap extends React.Component {
           </h4>
         </div>
         <div className="col-md-3">
-          <DataSelector onDataChange={this.handleCartogramDataChange}/>
+          <DataSelector updateMapData={this.handleCartogramDataChange}/>
         </div>
       </div>
     );
