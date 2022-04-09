@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import ElectorateMap from "./components/ElectorateMap"
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <div className="container">

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import DataSelector from "./DataSelector";
 import Electorate from "./Electorate";
 
-function ElectorateMap() {
+const ElectorateMap = () => {
   // By default, use the current state of federal parliament
   const [locations, setLocations] = useState(require("../data/locations2019.json"));
   const [parties, setParties] = useState(require("../data/partiespre2022.json"));

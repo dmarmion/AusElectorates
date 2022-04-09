@@ -2,7 +2,7 @@ import React from "react";
 
 import { getDatasetFiles } from "../utils";
 
-function DataSelector({ updateMapData }) {
+const DataSelector = ({ updateMapData }) => {
   // Tell the ElectorateMap which files should be used to generate the cartogram
   const handleSelectionChange = (locationsFile, partiesFile) => {
     // It is necessary to include the '../data/' in each call to require() so
