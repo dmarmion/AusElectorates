@@ -67,6 +67,46 @@
   background-color: #ff6300;
 }
 
+.electorate-yes50 {
+  background-color: greenyellow;
+}
+
+.electorate-yes60 {
+  background-color: chartreuse;
+}
+
+.electorate-yes70 {
+  background-color: limegreen;
+}
+
+.electorate-yes80 {
+  background-color: forestgreen;
+}
+
+.electorate-yes90 {
+  background-color: darkgreen;
+}
+
+.electorate-no50 {
+  background-color: lightsalmon;
+}
+
+.electorate-no60 {
+  background-color: tomato;
+}
+
+.electorate-no70 {
+  background-color: red;
+}
+
+.electorate-no80 {
+  background-color: firebrick;
+}
+
+.electorate-no90 {
+  background-color: darkred;
+}
+
 .data-selector label {
   width: 100%;
 }

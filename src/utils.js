@@ -13,6 +13,17 @@ export function getPartyClassMap() {
   partyClasses.set("Centre Alliance", "electorate-ca");
   partyClasses.set("Nick Xenophon Team", "electorate-nxt")
 
+  partyClasses.set("Yes 50-59%", "electorate-yes50");
+  partyClasses.set("Yes 60-69%", "electorate-yes60");
+  partyClasses.set("Yes 70-79%", "electorate-yes70");
+  partyClasses.set("Yes 80-89%", "electorate-yes80");
+  partyClasses.set("Yes 90+%", "electorate-yes90");
+  partyClasses.set("No 50-59%", "electorate-no50");
+  partyClasses.set("No 60-69%", "electorate-no60");
+  partyClasses.set("No 70-79%", "electorate-no70");
+  partyClasses.set("No 80-89%", "electorate-no80");
+  partyClasses.set("No 90+%", "electorate-no90");
+
   return partyClasses;
 }
 
@@ -27,6 +38,10 @@ export function getDatasetFiles() {
     locations: "locations2016.json",
     parties: "parties2016.json"
   });
+  datasetLocations.set("2017 Marriage Law Survey", {
+    locations: "locations2016.json",
+    parties: "marriage2017.json"
+  })
   datasetLocations.set("Before 2019 Federal Election", {
     locations: "locations2016.json",
     parties: "partiespre2019.json"
