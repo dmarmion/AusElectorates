@@ -41,11 +41,11 @@ export function getDatasetFiles() {
   datasetLocations.set("2017 Marriage Law Survey", {
     locations: "locations2016.json",
     parties: "marriage2017.json"
-  })
+  });
   datasetLocations.set("Before 2019 Federal Election", {
     locations: "locations2016.json",
     parties: "partiespre2019.json"
-  })
+  });
   datasetLocations.set("2019 Federal Election Results", {
     locations: "locations2019.json",
     parties: "parties2019.json"
@@ -61,19 +61,19 @@ export function getDatasetFiles() {
   datasetLocations.set("2014 Victorian Election Results", {
     locations: "locationsvic2014.json",
     parties: "partiesvic2014.json"
-  })
+  });
   datasetLocations.set("Before 2018 Victorian Election", {
     locations: "locationsvic2014.json",
     parties: "partiesvicpre2018.json"
-  })
+  });
   datasetLocations.set("2018 Victorian Election Results", {
     locations: "locationsvic2014.json",
     parties: "partiesvic2018.json"
-  })
+  });
   datasetLocations.set("2022 Victorian Election Results", {
     locations: "locationsvic2022.json",
     parties: "partiesvic2022.json"
-  })
+  });
 
   return datasetLocations;
 }
