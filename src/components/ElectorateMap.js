@@ -5,8 +5,8 @@ import Electorate from "./Electorate";
 
 const ElectorateMap = () => {
   // By default, use the current state of federal parliament
-  const [locations, setLocations] = useState(require("../data/locations2022.json"));
-  const [parties, setParties] = useState(require("../data/parties2022.json"));
+  const [locations, setLocations] = useState(require("../data/federal/locations2022.json"));
+  const [parties, setParties] = useState(require("../data/federal/parties2022.json"));
   const [currentElectorate, setCurrentElectorate] = useState("none");
 
   // Render the grid of electorates

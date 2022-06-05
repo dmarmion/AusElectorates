@@ -35,44 +35,44 @@ export function getDatasetFiles() {
   const datasetLocations = new Map();
 
   datasetLocations.set("2016 Federal Election Results", {
-    locations: "locations2016.json",
-    parties: "parties2016.json"
+    locations: "federal/locations2016.json",
+    parties: "federal/parties2016.json"
   });
   datasetLocations.set("2017 Marriage Law Survey", {
-    locations: "locations2016.json",
-    parties: "marriage2017.json"
+    locations: "federal/locations2016.json",
+    parties: "federal/marriage2017.json"
   });
   datasetLocations.set("Before 2019 Federal Election", {
-    locations: "locations2016.json",
-    parties: "partiespre2019.json"
+    locations: "federal/locations2016.json",
+    parties: "federal/partiespre2019.json"
   });
   datasetLocations.set("2019 Federal Election Results", {
-    locations: "locations2019.json",
-    parties: "parties2019.json"
+    locations: "federal/locations2019.json",
+    parties: "federal/parties2019.json"
   });
   datasetLocations.set("Before 2022 Federal Election", {
-    locations: "locations2019.json",
-    parties: "partiespre2022.json"
+    locations: "federal/locations2019.json",
+    parties: "federal/partiespre2022.json"
   });
   datasetLocations.set("2022 Federal Election Results", {
-    locations: "locations2022.json",
-    parties: "parties2022.json"
+    locations: "federal/locations2022.json",
+    parties: "federal/parties2022.json"
   });
   datasetLocations.set("2014 Victorian Election Results", {
-    locations: "locationsvic2014.json",
-    parties: "partiesvic2014.json"
+    locations: "vic/locations2014.json",
+    parties: "vic/parties2014.json"
   });
   datasetLocations.set("Before 2018 Victorian Election", {
-    locations: "locationsvic2014.json",
-    parties: "partiesvicpre2018.json"
+    locations: "vic/locations2014.json",
+    parties: "vic/partiespre2018.json"
   });
   datasetLocations.set("2018 Victorian Election Results", {
-    locations: "locationsvic2014.json",
-    parties: "partiesvic2018.json"
+    locations: "vic/locations2014.json",
+    parties: "vic/parties2018.json"
   });
   datasetLocations.set("2022 Victorian Election Results", {
-    locations: "locationsvic2022.json",
-    parties: "partiesvic2022.json"
+    locations: "vic/locations2022.json",
+    parties: "vic/parties2022.json"
   });
 
   return datasetLocations;
