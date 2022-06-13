@@ -1,6 +1,7 @@
 import React from "react";
 
-import { getDatasetFiles } from "../utils";
+import DatasetButtons from "./DatasetButtons";
+import { DATASET_FILES } from "../utils";
 
 const DataSelector = ({ updateMapData }) => {
   // Tell the ElectorateMap which files should be used to generate the cartogram
@@ -13,30 +14,16 @@ const DataSelector = ({ updateMapData }) => {
     updateMapData(locations, parties);
   }
 
-  const dataFiles = getDatasetFiles();
-
   return (
     <div className="data-selector">
       {
-        Array.from(dataFiles.keys()).map((datasetName) => {
+        DATASET_FILES.map(({ name, files }) => {
           return (
-            <div className="form-check" key={datasetName}>
-              <input
-                className="btn-check"
-                type="radio"
-                name="dataset"
-                id={datasetName}
-                value={datasetName}
-                onChange={() => handleSelectionChange(
-                  dataFiles.get(datasetName).locations,
-                  dataFiles.get(datasetName).parties
-                )}
-              />
-              <label className="btn btn-secondary" htmlFor={datasetName}>
-                {datasetName}
-              </label>
-            </div>
-          );
+            <React.Fragment key={name}>
+              <h5 className="text-center">{ name }</h5>
+              <DatasetButtons datasets={files} onChange={handleSelectionChange}/>
+            </React.Fragment>
+          )
         })
       }
     </div>

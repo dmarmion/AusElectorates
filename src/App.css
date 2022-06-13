@@ -107,6 +107,14 @@
   background-color: darkred;
 }
 
+.data-selector h5:nth-child(n+2) {
+  margin-top: 20px;
+}
+
 .data-selector label {
   width: 100%;
+}
+
+.dataset-button {
+  padding-left: 0px;
 }
