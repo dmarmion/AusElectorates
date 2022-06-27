@@ -12,7 +12,7 @@ const Electorate = ({ name, party, onSelectionChange }) => {
     const delimiter = " ";
 
     // The square should be blank if it does not contain an electorate
-    if (name === "none") {
+    if (!name) {
       classes += "electorate-none" + delimiter;
     } else {
       let partyClass = getPartyClassMap().get(party);
@@ -31,7 +31,7 @@ const Electorate = ({ name, party, onSelectionChange }) => {
     <div
       className={"electorate " + getElectorateClasses()}
       onMouseEnter={() => onSelectionChange(name)}
-      onMouseLeave={() => onSelectionChange("none")}
+      onMouseLeave={() => onSelectionChange(null)}
     >
     </div>
   );

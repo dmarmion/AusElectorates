@@ -7,7 +7,7 @@ const ElectorateMap = () => {
   // By default, use the current state of federal parliament
   const [locations, setLocations] = useState(require("../data/federal/locations2022.json"));
   const [parties, setParties] = useState(require("../data/federal/parties2022.json"));
-  const [currentElectorate, setCurrentElectorate] = useState("none");
+  const [currentElectorate, setCurrentElectorate] = useState(null);
 
   // Render the grid of electorates
   const renderElectorates = () => {    
@@ -29,7 +29,7 @@ const ElectorateMap = () => {
       let cols = [];
       for (let col = 0; col < locations.columns; col++) {
         let seatName = locations[`${col},${row}`];
-        let party = (seatName === "none" ? "" : parties[seatName]);
+        let party = seatName ? parties[seatName] : "";
 
         cols.push(
           <td key={`${row}-${col}`}>
@@ -69,11 +69,7 @@ const ElectorateMap = () => {
       <div className="col-md-9">
         {renderElectorates()}
         <h4>
-          Currently selected: {
-            currentElectorate === "none"
-              ? ""
-              : `${currentElectorate} (${parties[currentElectorate]})`
-          }
+          Currently selected: { currentElectorate ? `${currentElectorate} (${parties[currentElectorate]})` : "" }
         </h4>
       </div>
       <div className="col-md-3">
