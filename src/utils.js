@@ -6,12 +6,14 @@ export function getPartyClassMap() {
   partyClasses.set("Liberal", "electorate-liberal");
   partyClasses.set("Nationals", "electorate-nationals");
   partyClasses.set("Liberal National", "electorate-lnp");
+  partyClasses.set("Country Liberal", "electorate-clp");
   partyClasses.set("Independent", "electorate-ind");
   partyClasses.set("Greens", "electorate-greens");
   partyClasses.set("United Australia", "electorate-uap");
   partyClasses.set("Katter's Australian", "electorate-kap");
   partyClasses.set("Centre Alliance", "electorate-ca");
   partyClasses.set("Nick Xenophon Team", "electorate-nxt")
+  partyClasses.set("Palmer United", "electorate-pup");
 
   partyClasses.set("Yes 50-59%", "electorate-yes50");
   partyClasses.set("Yes 60-69%", "electorate-yes60");
@@ -30,7 +32,12 @@ export function getPartyClassMap() {
 export const DATASET_FILES = [
   {
     name: "Federal Maps",
-    files: new Map().set("2016 Federal Election Results", {
+    files: new Map()
+      .set("2013 Federal Election Results", {
+        locations: "federal/locations2013.json",
+        parties: "federal/parties2013.json"
+      })
+      .set("2016 Federal Election Results", {
         locations: "federal/locations2016.json",
         parties: "federal/parties2016.json"
       })
