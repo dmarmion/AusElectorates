@@ -1,33 +1,31 @@
-/* Get a Map mapping party names to their electorate CSS class */
-export function getPartyClassMap() {
-  const partyClasses = new Map();
+// The party colours are those used by Wikipedia, see
+// https://en.wikipedia.org/wiki/Category:Australia_political_party_color_templates
+export const PARTY_COLOURS = new Map()
+  .set("Labor", "#de3533")
+  .set("Liberal", "#0047ab")
+  .set("Nationals", "#006644")
+  .set("Liberal National", "#1456f1")
+  .set("Country Liberal", "#ff7f00")
+  .set("Independent", "grey")
+  .set("Greens", "#00a651")
+  .set("United Australia", "#ff3d00")
+  .set("Katter's Australian", "#b50204")
+  .set("Centre Alliance", "#ff6300")
+  .set("Nick Xenophon Team", "#ff6300")
+  .set("Palmer United", "#ffed00")
+  .set("Yes 50-59%", "greenyellow")
+  .set("Yes 60-69%", "chartreuse")
+  .set("Yes 70-79%", "limegreen")
+  .set("Yes 80-89%", "forestgreen")
+  .set("Yes 90+%", "darkgreen")
+  .set("No 50-59%", "lightsalmon")
+  .set("No 60-69%", "tomato")
+  .set("No 70-79%", "red")
+  .set("No 80-89%", "firebrick")
+  .set("No 90+%", "darkred")
+  .set("Not Yet Determined", "lightgrey");
 
-  partyClasses.set("Labor", "electorate-labor");
-  partyClasses.set("Liberal", "electorate-liberal");
-  partyClasses.set("Nationals", "electorate-nationals");
-  partyClasses.set("Liberal National", "electorate-lnp");
-  partyClasses.set("Country Liberal", "electorate-clp");
-  partyClasses.set("Independent", "electorate-ind");
-  partyClasses.set("Greens", "electorate-greens");
-  partyClasses.set("United Australia", "electorate-uap");
-  partyClasses.set("Katter's Australian", "electorate-kap");
-  partyClasses.set("Centre Alliance", "electorate-ca");
-  partyClasses.set("Nick Xenophon Team", "electorate-nxt")
-  partyClasses.set("Palmer United", "electorate-pup");
-
-  partyClasses.set("Yes 50-59%", "electorate-yes50");
-  partyClasses.set("Yes 60-69%", "electorate-yes60");
-  partyClasses.set("Yes 70-79%", "electorate-yes70");
-  partyClasses.set("Yes 80-89%", "electorate-yes80");
-  partyClasses.set("Yes 90+%", "electorate-yes90");
-  partyClasses.set("No 50-59%", "electorate-no50");
-  partyClasses.set("No 60-69%", "electorate-no60");
-  partyClasses.set("No 70-79%", "electorate-no70");
-  partyClasses.set("No 80-89%", "electorate-no80");
-  partyClasses.set("No 90+%", "electorate-no90");
-
-  return partyClasses;
-}
+export const NO_PARTY_COLOUR = "white";
 
 export const DATASET_FILES = [
   {

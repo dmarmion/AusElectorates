@@ -1,37 +1,15 @@
 import React from "react";
-import { getPartyClassMap } from "../utils";
+
+import { NO_PARTY_COLOUR, PARTY_COLOURS } from "../constants";
 
 const Electorate = ({ name, party, onSelectionChange }) => {
-  /*
-   * Get a string containing the CSS classes (aside from 'electorate') that this
-   * component should have. This is primarily used to determine the colour of the
-   * electorate.   
-   */
-  const getElectorateClasses = () => {
-    let classes = "";
-    const delimiter = " ";
-
-    // The square should be blank if it does not contain an electorate
-    if (!name) {
-      classes += "electorate-none" + delimiter;
-    } else {
-      let partyClass = getPartyClassMap().get(party);
-
-      if (partyClass === undefined) {
-        partyClass = "";
-      }
-
-      classes += partyClass + delimiter;
-    }
-
-    return classes.trimEnd();
-  }
-
+  const partyColour = party ? PARTY_COLOURS.get(party) : NO_PARTY_COLOUR;
   return (
     <div
-      className={"electorate " + getElectorateClasses()}
+      className="electorate"
       onMouseEnter={() => onSelectionChange(name)}
       onMouseLeave={() => onSelectionChange(null)}
+      style={{backgroundColor: partyColour}}
     >
     </div>
   );

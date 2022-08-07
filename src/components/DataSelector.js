@@ -1,7 +1,7 @@
 import React from "react";
 
 import DatasetButtons from "./DatasetButtons";
-import { DATASET_FILES } from "../utils";
+import { DATASET_FILES } from "../constants";
 
 const DataSelector = ({ updateMapData }) => {
   // Tell the ElectorateMap which files should be used to generate the cartogram
