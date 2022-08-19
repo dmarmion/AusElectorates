@@ -12,22 +12,20 @@ const DataSelector = ({ updateMapData }) => {
     let parties = require(`../data/${partiesFile}`);
 
     updateMapData(locations, parties);
-  }
+  };
 
   return (
     <div className="data-selector">
-      {
-        DATASET_FILES.map(({ name, files }) => {
-          return (
-            <React.Fragment key={name}>
-              <h5 className="text-center">{ name }</h5>
-              <DatasetButtons datasets={files} onChange={handleSelectionChange}/>
-            </React.Fragment>
-          )
-        })
-      }
+      {DATASET_FILES.map(({ name, files }) => {
+        return (
+          <React.Fragment key={name}>
+            <h5 className="text-center">{name}</h5>
+            <DatasetButtons datasets={files} onChange={handleSelectionChange} />
+          </React.Fragment>
+        );
+      })}
     </div>
   );
-}
+};
 
 export default DataSelector;

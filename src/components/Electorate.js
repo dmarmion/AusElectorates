@@ -9,10 +9,9 @@ const Electorate = ({ name, party, onSelectionChange }) => {
       className="electorate"
       onMouseEnter={() => onSelectionChange(name)}
       onMouseLeave={() => onSelectionChange(null)}
-      style={{backgroundColor: partyColour}}
-    >
-    </div>
+      style={{ backgroundColor: partyColour }}
+    ></div>
   );
-}
+};
 
 export default Electorate;

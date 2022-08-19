@@ -1,5 +1,5 @@
 * {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .header {
@@ -18,7 +18,7 @@
   width: 30px;
 }
 
-.data-selector h5:nth-child(n+2) {
+.data-selector h5:nth-child(n + 2) {
   margin-top: 20px;
 }
 

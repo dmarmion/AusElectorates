@@ -10,16 +10,12 @@ const ElectorateMap = () => {
   const [currentElectorate, setCurrentElectorate] = useState(null);
 
   // Render the grid of electorates
-  const renderElectorates = () => {    
+  const renderElectorates = () => {
     // Helper function to generate the rows of the table
     const renderGridRows = () => {
       let rows = [];
       for (let row = 0; row < locations.rows; row++) {
-        rows.push(
-          <tr key={row}>
-            {renderGridColumns(row)}
-          </tr>
-        )
+        rows.push(<tr key={row}>{renderGridColumns(row)}</tr>);
       }
       return rows;
     };
@@ -33,50 +29,45 @@ const ElectorateMap = () => {
 
         cols.push(
           <td key={`${row}-${col}`}>
-            <Electorate
-              name={seatName}
-              party={party}
-              onSelectionChange={handleElectorateChange}
-            />
+            <Electorate name={seatName} party={party} onSelectionChange={handleElectorateChange} />
           </td>
-        )
+        );
       }
       return cols;
     };
 
     return (
       <table className="electorate-map">
-        <tbody>
-          {renderGridRows()}
-        </tbody>
+        <tbody>{renderGridRows()}</tbody>
       </table>
     );
-  }
+  };
 
   // Update the data used to construct the cartogram
   const handleCartogramDataChange = (locations, parties) => {
     setLocations(locations);
     setParties(parties);
-  }
+  };
 
   // Update the currently selected electorate
   const handleElectorateChange = (electorate) => {
     setCurrentElectorate(electorate);
-  }
+  };
 
   return (
     <div className="row">
       <div className="col-md-9">
         {renderElectorates()}
         <h4>
-          Currently selected: { currentElectorate ? `${currentElectorate} (${parties[currentElectorate]})` : "" }
+          Currently selected:{" "}
+          {currentElectorate ? `${currentElectorate} (${parties[currentElectorate]})` : ""}
         </h4>
       </div>
       <div className="col-md-3">
-        <DataSelector updateMapData={handleCartogramDataChange}/>
+        <DataSelector updateMapData={handleCartogramDataChange} />
       </div>
     </div>
   );
-}
+};
 
 export default ElectorateMap;
