@@ -3,9 +3,10 @@
 export const PARTY_COLOURS = new Map()
   .set("Labor", "#de3533")
   .set("Liberal", "#0047ab")
-  .set("Nationals", "#006644")
+  .set("Nationals", "#008000")
   .set("Liberal National", "#1456f1")
   .set("Country Liberal", "#ff7f00")
+  .set("Nationals (WA)", "#008000")
   .set("Independent", "grey")
   .set("Greens", "#00a651")
   .set("United Australia", "#ffed00")
@@ -31,6 +32,10 @@ export const DATASET_FILES = [
   {
     name: "Federal Maps",
     files: new Map()
+      .set("2010 Federal Election Results", {
+        locations: "federal/locations2010.json",
+        parties: "federal/parties2010.json"
+      })
       .set("2013 Federal Election Results", {
         locations: "federal/locations2013.json",
         parties: "federal/parties2013.json",
