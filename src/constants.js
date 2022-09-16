@@ -36,6 +36,10 @@ export const DATASET_FILES = [
         locations: "federal/locations2010.json",
         parties: "federal/parties2010.json"
       })
+      .set("Before 2013 Federal Election", {
+        locations: "federal/locations2010.json",
+        parties: "federal/partiespre2013.json",
+      })
       .set("2013 Federal Election Results", {
         locations: "federal/locations2013.json",
         parties: "federal/parties2013.json",
