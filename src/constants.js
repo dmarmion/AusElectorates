@@ -72,6 +72,10 @@ export const DATASET_FILES = [
   {
     name: "Victorian Maps",
     files: new Map()
+      .set("2006 Victorian Election Results", {
+        locations: "vic/locations2006.json",
+        parties: "vic/parties2006.json",
+      })
       .set("2010 Victorian Election Results", {
         locations: "vic/locations2006.json",
         parties: "vic/parties2010.json",
