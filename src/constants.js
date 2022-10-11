@@ -32,6 +32,14 @@ export const DATASET_FILES = [
   {
     name: "Federal Maps",
     files: new Map()
+      .set("2007 Federal Election Results", {
+        locations: "federal/locations2007.json",
+        parties: "federal/parties2007.json"
+      })
+      .set("Before 2010 Federal Election", {
+        locations: "federal/locations2007.json",
+        parties: "federal/partiespre2010.json"
+      })
       .set("2010 Federal Election Results", {
         locations: "federal/locations2010.json",
         parties: "federal/parties2010.json"
