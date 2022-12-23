@@ -75,6 +75,10 @@ export const DATASET_FILES = [
       .set("2022 Federal Election Results", {
         locations: "federal/locations2022.json",
         parties: "federal/parties2022.json",
+      })
+      .set("Before 2025 Federal Election", {
+        locations: "federal/locations2022.json",
+        parties: "federal/partiespre2025.json",
       }),
   },
   {
