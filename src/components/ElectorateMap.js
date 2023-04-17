@@ -6,7 +6,7 @@ import Electorate from "./Electorate";
 const ElectorateMap = () => {
   // By default, use the current state of federal parliament
   const [locations, setLocations] = useState(require("../data/federal/locations2022.json"));
-  const [parties, setParties] = useState(require("../data/federal/parties2022.json"));
+  const [parties, setParties] = useState(require("../data/federal/partiespre2025.json"));
   const [currentElectorate, setCurrentElectorate] = useState(null);
 
   const handleCartogramDataChange = (locations, parties) => {
